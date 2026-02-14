@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: vaani-cuelinks-backend
+    env: node
+    plan: free
+    region: ohio # Aap apni pasand ka region select kar sakte hain
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.x
+      - key: CUELINKS_API_KEY
+        sync: false # Iska matlab aap dashboard se manually value dalenge
